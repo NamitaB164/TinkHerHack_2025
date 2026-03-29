@@ -1,116 +1,89 @@
-Chatty 🎯 
-
-Team Name: NAM 
-
-Team Members
-
-Member 1: Aswini KS - NSS College Of Engineering
-
-Member 2: Merin PR - NSS College Of Engineering
-
-Member 3: Namita B - NSS College Of Engineering
-
-
-
-
-Project Description
-
-This project aims to create a chatbot-storyteller designed specifically for children who are bedridden or living in hospitals. The chatbot will serve as a companion to bring joy, comfort, and entertainment to children during their hospital stay.
-
-The Problem statement
-
-Children who are bedridden or living in hospitals often face emotional and psychological challenges due to prolonged stays and limited social interaction.
-
-The Solution
-
-To bring a sense of comfort and entertainment to these children, we aim to build a chatbot-storyteller that:
-
-  1. Engages Children: A kid-friendly chatbot that provides valuable facts along with the answers to their queries.
-  2. Offers Choice: Allows children to choose stories from various genres (e.g., adventure, fantasy, comedy) and select their favorite characters for interaction(additional feature).
-  3. Supports Narration: Stories can be narrated by real people or auto-narrated during upload.(Additional feature)
-  4. Catches Attention: Features a colorful, kid-friendly UI designed to attract and entertain children.
-    
-   This chatbot will serve as a companion to brighten their day, spark imagination, and provide a sense of normalcy during their hospital stay.
-
-
-Technical Details
-
-
-Technologies/Components Used
-
-For Software:
-
-Python
-Django,
-django,google-generativeai,python-dotenv
-Git,Terminal,VScode
-
-For Hardware:
-
-Lenovo- Ideapad Slim 3 core i5 8gb ram,
-HP- Pavillion core i5,
-HP- core i5
-
-Implementation
-
-For Software: Installation
-
-    pip install django
-    pip install django google-generativeai python-dotenv
-
-Run
-
-1.For Chatbot - python3 manage.py runserver
-
-Project Documentation
-
-Home Page
-![image](https://github.com/user-attachments/assets/db120b22-cc29-4b95-92bc-64e089c7b762)
-
-
-
-
-
-
-Child-Friendly chatbot
-
-
-![image](https://github.com/user-attachments/assets/399a6790-1292-4971-a9b3-ee29d7d38630)
-
-
-
-
-
-
-Story Teller
-
-
-![Screenshot (5)](https://github.com/user-attachments/assets/3f08072e-9324-4391-8910-cc0a81658de4)
-
-
-Demo Video
-
-
-https://drive.google.com/drive/folders/1GjuS9iSBZACY8b02Y9B6FKWHHYArtWhn?usp=sharing
-
-
-
-
-Flow Chart
-
-
-![image](https://github.com/user-attachments/assets/69b12d18-690e-4662-b62a-94f724a90f19)
-
-
-
-
-Team Contributions
-
-Aswini KS: Created Story Teller and its interface
-
-Merin PR: Made significant changes to Story Teller and its interface
-
-Namita B: Created Chatbot and its interface. Integrated Chatbot and Story Teller
-
-
-
+# ✨ Chatty: Magical Stories & Friendship for Little Explorers
+
+**Chatty** is a therapeutic AI-powered application designed specifically to support and entertain **hospitalized children**. By combining the power of Google's Gemini AI with a soothing, magical interface, Chatty provides emotional support, creative distraction, and a friendly companion during challenging times.
+
+---
+
+## 💜 Our Mission
+Hospital stays can be lonely and scary for children. Chatty was built to:
+- **Inspire Imagination**: Generate endless, unique stories across various genres.
+- **Provide Companionship**: A supportive AI friend that's always ready to chat and cheer them up.
+- **Create a Safe Space**: A kid-friendly interface with gentle colors and interactive magic.
+
+---
+
+## 🚀 Features
+
+### 📖 The Story Teller
+A magical library where children can choose their own adventure!
+- **Genres**: Fantasy, Mystery, Dreams, Adventure, and Fairytales.
+- **AI-Powered**: Generates unique, moral-driven stories in real-time.
+- **Read-to-Me**: Integrated Text-to-Speech (TTS) so children can close their eyes and listen.
+
+### 👾 My Friend (Chatbot)
+A cheerful AI companion powered by **Gemini 3 Flash**.
+- **Playful Personality**: Uses emojis and encouraging language.
+- **Supportive**: Ready to tell jokes, share fun facts, or just listen.
+- **Kid-Safe**: Designed with strict system instructions for simple, positive interactions.
+
+### 🎨 Premium UI/UX
+- **Purple-Lavender Theme**: Soft, calming colors tailored for a supportive environment.
+- **Glassmorphism**: Modern, sleek cards with translucent effects.
+- **Magic Wand Effects**: Sparkle and particle animations on every interaction.
+- **Floating Particles**: Drifting magical shapes to make the screen feel alive.
+
+---
+
+## 🛠️ Technical Setup
+
+### Prerequisites
+- Python 3.10+
+- A Google Gemini API Key
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/NamitaB164/TinkHerHack_2025.git
+   cd TinkHerHack_2025
+   ```
+
+2. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure Environment Variables**:
+   Create a `.env` file in the root directory (refer to `.env.example`):
+   ```env
+   GOOGLE_API_KEY=your_actual_api_key_here
+   ```
+
+5. **Run the Application**:
+   ```bash
+   python manage.py runserver
+   ```
+   Visit `http://127.0.0.1:8000` to begin the magic!
+
+---
+
+## 📂 Project Structure
+- `core/`: Main Django settings and URL configurations.
+- `storytelling_app/`: The AI Story Generator and reader view.
+- `chatbot_app/`: The supportive AI friend chat interface.
+- `templates/`: Global layout and landing pages.
+- `static/`: Global CSS, JS, and asset files.
+
+---
+
+## 💎 Credits & Support
+Made with 💜 for the **TinkHerHack 2025** hackathon. 
+
+---
+*“Because every child deserves a little magic, even in a hospital bed.”* ✨

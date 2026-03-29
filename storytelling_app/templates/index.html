@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Story Box - Choose Your Adventure{% endblock %}
+
+{% block content %}
+<div class="story-box-hero">
+    <span class="magic-sparkle">✨</span>
+    <h2>Choose Your Adventure!</h2>
+    <p>Where would you like to go today? Pick a world and let the magic begin!</p>
+</div>
+
+<div class="genres">
+    <a href="story/fantasy/" class="genre"><span class="genre-emoji">🦄</span> Fantasy</a>
+    <a href="story/thriller/" class="genre"><span class="genre-emoji">🔍</span> Mystery</a>
+    <a href="story/fiction/" class="genre"><span class="genre-emoji">🌟</span> Dreams</a>
+    <a href="story/adventure/" class="genre"><span class="genre-emoji">🗺️</span> Adventure</a>
+    <a href="story/fairytale/" class="genre"><span class="genre-emoji">🏰</span> Fairytale</a>
+</div>
+
+<div class="navigation-footer">
+    <a href="/" class="back-link">← Back to World Select</a>
+</div>
+
+<style>
+    .story-box-hero {
+        margin-bottom: 40px;
+    }
+    .magic-sparkle {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 10px;
+        animation: rotate 5s infinite linear;
+    }
+    .genre-emoji {
+        font-size: 1.8rem;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .navigation-footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(106, 76, 156, 0.1);
+    }
+    @keyframes rotate {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.15) rotate(10deg); }
+        100% { transform: scale(1); }
+    }
+</style>
+{% endblock %}

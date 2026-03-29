@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ genre|title }} Story - Magic Time{% endblock %}
+
+{% block content %}
+<div class="story-container">
+    <div class="story-header">
+        <span class="story-badge">{{ genre|title }}</span>
+        <h2>Your Magic Story</h2>
+    </div>
+
+    <!-- The story box with high-quality AI text -->
+    <div id="story-text">
+        <div class="loading-magic">
+            <span class="magic-wand">🪄</span>
+            <p>Weaving a magical story just for you...</p>
+        </div>
+        {{ story|linebreaks }}
+    </div>
+
+    <!-- Enhanced Magic Controls (Voice) -->
+    <div class="controls">
+        <button onclick="speakStory()" class="magic-btn btn-play"><span>🔊</span> Read to me!</button>
+        <button onclick="pauseStory()" class="magic-btn btn-pause"><span>⏸️</span> Catch my breath</button>
+        <button onclick="resumeStory()" class="magic-btn btn-resume"><span>▶️</span> Continue!</button>
+        <button onclick="stopStory()" class="magic-btn btn-stop"><span>⏹️</span> Close Book</button>
+    </div>
+
+    <div class="navigation-footer">
+        <a href="/storyteller/" class="back-link">← Go back to Story Box</a>
+    </div>
+</div>
+
+<style>
+    /* Specialized Styling for Story View */
+    .story-badge {
+        display: inline-block;
+        padding: 5px 15px;
+        background: var(--accent-pink);
+        color: white;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .loading-magic {
+        display: none; /* Only show via JS if we add an ASYNC fetch later */
+        text-align: center;
+        padding: 50px;
+    }
+    .magic-wand {
+        font-size: 3rem;
+        animation: wave 1s infinite alternate ease-in-out;
+        display: block;
+    }
+    @keyframes wave {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(45deg); }
+    }
+
+    .magic-btn {
+        min-width: 200px;
+        justify-content: center;
+    }
+    .btn-play { background: linear-gradient(135deg, #6a4c9c, #9b6bcf); }
+    .btn-pause { background: linear-gradient(135deg, #ba68c8, #ce93d8); }
+    .btn-stop { background: linear-gradient(135deg, #ff80ab, #ff4081); }
+
+    .navigation-footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(106, 76, 156, 0.1);
+    }
+</style>
+
+<script>
+    // Ensure the loading magic disappears if text is present
+    document.addEventListener("DOMContentLoaded", () => {
+        const storyBox = document.getElementById("story-text");
+        if (storyBox.innerText.trim().length > 50) {
+            // Already populated
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts: Outfit (modern, rounded, friendly) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/tts.js' %}" defer></script>
+    <title>{% block title %}Chatty - Fun for Kids{% endblock %}</title>
+</head>
+<body class="lavender-theme">
+    <!-- Magic Background Elements (Floating Bubbles/Stars) -->
+    <div class="magic-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="logo-container">
+            <span class="emoji-logo">✨</span>
+            <h1>Chatty</h1>
+        </div>
+    </header>
+
+    <main class="main-container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="soft-footer">
+        <p>Made with 💜 for little explorers</p>
+    </footer>
+
+    <!-- Global Sound Toggle (Optional future feature placeholder) -->
+</body>
+</html>

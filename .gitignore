@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+db.sqlite3
+media/
+static/
+staticfiles/
+
+# Environment variables
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Project-specific
+test_gemini.py
+*.md.resolved*
+*.metadata.json
